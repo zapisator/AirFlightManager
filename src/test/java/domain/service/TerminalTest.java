@@ -1,6 +1,5 @@
 package domain.service;
 
-import org.apache.commons.cli.CommandLine;
 import org.junit.jupiter.api.RepeatedTest;
 
 import java.util.ArrayList;
@@ -20,12 +19,12 @@ class TerminalTest {
 
         Collections.shuffle(argsList);
         final String[] args = argsList.toArray(new String[]{});
-        final CommandLine commandLine = TerminalImpl.parseArgs(args);
+        final TerminalImpl terminal = TerminalImpl.parseArgs(args);
 
         assertAll(
-                () -> assertEquals("tickets.json", commandLine.getOptionValue("f")),
-                () -> assertEquals("Владивосток", commandLine.getOptionValue("d")),
-                () -> assertEquals("Тель-Авив", commandLine.getOptionValue("a"))
+                () -> assertEquals("tickets.json", terminal.fileName()),
+                () -> assertEquals("Vladivostok", terminal.departureCity()),
+                () -> assertEquals("Tel_Aviv", terminal.arrivalCity())
         );
     }
 

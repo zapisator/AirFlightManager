@@ -18,12 +18,14 @@ class TicketReaderTest {
         final String filename = Objects.requireNonNull(
                 getClass().getClassLoader().getResource("tickets.json")
         ).getPath();
-        final List<Ticket> tickets = new TicketReader().readTickets(filename);
+        final List<Ticket> tickets = new TicketReader()
+                .readTickets(filename)
+                .getTickets();
 
         assertAll(
-                () -> assertEquals(3, tickets.size()),
+                () -> assertEquals(10, tickets.size()),
                 () -> assertTrue(tickets.stream()
-                                         .allMatch(ticket -> ticket.getArrivalCity().equals("Tel_Aviv")))
+                                         .allMatch(ticket -> ticket.getDestination().equals("TLV")))
         );
     }
 
