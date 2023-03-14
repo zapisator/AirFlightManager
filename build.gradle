@@ -32,6 +32,7 @@ dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
     implementation 'commons-cli:commons-cli:1.4'
+    implementation 'org.apache.commons:commons-math3:3.6.1'
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
     testImplementation 'org.junit.jupiter:junit-jupiter-params'
     testImplementation 'org.hamcrest:hamcrest:2.2'
