@@ -52,7 +52,7 @@ public class FlightManager {
                                 timeDurationExtractor, filterPredicate,
                                 departure, arrival)
                 ))
-                .forEach(entry -> System.out.printf("Авиаперевозчик: %s, минимальное время: %sSs%n",
+                .forEach(entry -> System.out.printf("Авиаперевозчик: %s, минимальное время: %s [минуты]%n",
                         entry.getKey(),
                         entry.getValue().minimum())
                 );
