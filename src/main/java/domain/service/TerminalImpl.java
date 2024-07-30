@@ -93,5 +93,4 @@ public class TerminalImpl {
         throw new RuntimeException("Требуется указать путь до файла");
     }
 
-
 }
